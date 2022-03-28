@@ -23,16 +23,18 @@ export default function App() {
     // other logic
   };
   return (
-    <div>
+    <div className="contenu">
       <Navigation />
-      <Searchmovie
-        searchp={search}
-        handelserchp={handelserch}
-        searchrate={ratin}
-        handelserchrate={handleRating}
-      />
+      <div className="serch">
+        <Searchmovie
+          searchp={search}
+          handelserchp={handelserch}
+          searchrate={ratin}
+          handelserchrate={handleRating}
+        />
+        <AddMovie handeladd={handeladd} />
+      </div>
       <h1>Disney Movies</h1>
-      <AddMovie handeladd={handeladd} />
       <MovieList
         moviesprops={films.filter(
           (film) =>
